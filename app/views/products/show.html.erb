@@ -8,7 +8,7 @@ Inventory: <p class=product-inventory><%= @product.inventory %></p>
 <script type="text/javascript" charset="utf-8">
 $(function (){
   $("a.js-next").on("click", function(data){
-    var id = parseInt($("a.js-next").attr("data-id") + 1)
+    var id = parseInt($("a.js-next").attr("data-id")) +1
     $.get('/products/'+ id + '/data', function(data) {
         $(".product-name").text(data["name"]);
         $(".product-desc").text(data["desc"]);
