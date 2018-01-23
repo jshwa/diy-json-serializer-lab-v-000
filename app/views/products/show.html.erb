@@ -1,0 +1,15 @@
+<h1><%= @product.name %></h1>
+<a href="#" class="js-next" data-id="<%= @product.id %>">Next</a>
+
+<p><%= @product.description %></p>
+Price: <%= @product.price %>
+Inventory: <%= @product.inventory %>
+
+<script javascript or whatever>
+$(function (){
+  $("a.js-next").on("click", function(data){
+    var id = data[data]
+  })
+})
+  
+</script>
