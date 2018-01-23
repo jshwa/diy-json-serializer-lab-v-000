@@ -1,15 +1,18 @@
-<h1><%= @product.name %></h1>
+<h1 class="product-name"><%= @product.name %></h1>
 <a href="#" class="js-next" data-id="<%= @product.id %>">Next</a>
 
-<p><%= @product.description %></p>
-Price: <%= @product.price %>
-Inventory: <%= @product.inventory %>
+<p class=product-desc><%= @product.description %></p>
+Price: <p class=product-price><%= @product.price %></p>
+Inventory: <p class=product-inventory><%= @product.inventory %></p>
 
 <script javascript or whatever>
 $(function (){
   $("a.js-next").on("click", function(data){
-    var id = data[data]
+    var id = parseInt($("a.js-next").attr("data-id") + 1)
+    $.get('/products/'+ id + '/data', function(data) {
+
+    })
   })
 })
-  
+
 </script>
