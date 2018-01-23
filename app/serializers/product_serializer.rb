@@ -3,7 +3,7 @@ class ProductSerializer
     serialized_post = '{'
     serialized_post += '"name": ' + product.name + ', '
     serialized_post += '"price": "' + product.price.to_s + '", '
-    serialized_post += '"inventory": "' + product.inventory + '", '
+    serialized_post += '"inventory": "' + product.inventory.to_s + '", '
     serialized_post += '"description": "' + product.description + '", '
     serialized_post += '}'
   end
